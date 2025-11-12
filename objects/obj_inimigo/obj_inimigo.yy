@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"inimigo1_spr",
-    "path":"sprites/inimigo1_spr/inimigo1_spr.yy",
+    "name":"Sprite24",
+    "path":"sprites/Sprite24/Sprite24.yy",
   },
   "spriteMaskId":null,
   "visible":true,

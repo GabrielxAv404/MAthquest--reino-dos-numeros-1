@@ -62,5 +62,31 @@ if (boss2_derrotado) {
 if (mensagem_boss_tempo > 0) {
     mensagem_boss_tempo--;
 }
+/// STEP EVENT — controle de vida e fim de jogo
+
+// Se a vida global acabar
+// Verifica se o jogador morreu
+if (global.vida <= 0) {
+    // Mostra mensagem no console (debug)
+    show_debug_message("Jogador morreu!");
+    
+    // Cria o objeto da tela de Game Over
+    instance_create_layer(room_width / 2, room_height / 2, "Instances_1", obj_gameover);
+    
+    // Desativa tudo
+    spawn_ativo = false;
+    
+    // Destroi inimigos e bosses ativos
+    with (obj_inimigo) instance_destroy();
+    with (obj_inimigo2) instance_destroy();
+    with (obj_inimigo3) instance_destroy();
+    with (obj_inimigo4) instance_destroy();
+    with (obj_boss) instance_destroy();
+    with (obj_boss2) instance_destroy();
+    with (obj_boss3) instance_destroy();
+    
+    // Destroi o controlador antigo para reiniciar depois
+    instance_destroy(id);
+}
 
 

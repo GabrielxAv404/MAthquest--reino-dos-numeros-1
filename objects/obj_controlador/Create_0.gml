@@ -23,7 +23,7 @@ boss2_spawned = false;
 // Controle de spawn
 spawn_ativo = true;
 
-global.vida = 1000;
+global.vida = 1;
 
 // Começa a primeira horda
 alarm[0] = room_speed * 2;
